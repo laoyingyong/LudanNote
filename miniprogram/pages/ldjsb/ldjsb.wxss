@@ -1,0 +1,56 @@
+/* miniprogram/pages/ldjsb/ldjsb.wxss */
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.item{
+  border: 1px solid rebeccapurple;
+  margin: 5px;
+  border-radius:5px;
+
+}
+
+.item-detail{
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  color: blue;
+}
+
+.content{
+  color: gray;
+}
+
+.in-item{
+  background-color:burlywood;
+}
+
+.add{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.addbtn{
+  display: flex;
+  font-size: 30rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.img{
+  width:50rpx;
+  height:50rpx;
+}
+
+.addtxt{
+  color: green;
+}
+
+.scrollview{
+  height: 500px;
+}

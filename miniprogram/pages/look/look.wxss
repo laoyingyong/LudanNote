@@ -1,0 +1,24 @@
+/* miniprogram/pages/look/look.wxss */
+.main{
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  text-align: center;
+  color: blue;
+  margin: 10px;
+}
+
+.shijian{
+  text-align: center;
+  font-size: 15px;
+  color: gray;
+}
+
+.content{
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right:10px;
+  margin-bottom:10px;
+}

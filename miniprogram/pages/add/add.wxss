@@ -1,0 +1,30 @@
+/* miniprogram/pages/add/add.wxss */
+.main{
+  display: flex;
+  flex-direction:column;
+}
+
+.title{
+  text-align:center;
+  margin:5px;
+  border: 1px solid blue;
+  border-radius:5px
+}
+
+.mytextarea{
+  height: 400px;
+  width: 95%;
+  border: 1px solid red;
+}
+ 
+.content{
+  width: 100%;
+  padding: 10px;
+}
+
+.save{
+  width: 95%;
+  margin-left: 10px;
+  position:fixed;
+  bottom: 0;
+}

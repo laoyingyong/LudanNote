@@ -1,0 +1,8 @@
+<!--miniprogram/pages/look/look.wxml-->
+<view class="main">
+  <view class="title">{{title}}</view>
+  <view class="shijian">{{shijian}}</view>
+  <view class="content">{{content}}</view>
+
+
+</view>

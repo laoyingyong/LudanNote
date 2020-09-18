@@ -1,0 +1,17 @@
+<!--miniprogram/pages/add/add.wxml-->
+<view class="main">
+  <view class="title">
+    <input placeholder="请输入标题" bindinput="setTitle"/>
+  </view>
+  <view class="content">
+    <textarea placeholder="请输入正文" maxlength="-1" class="mytextarea" bindinput="setContent">
+    </textarea>
+  </view>
+
+  <view class="save">
+    <button bindtap="save" style="width:100%;border:1px solid gray;border-radius:5px;margin-bottom:10px">保存</button>
+  </view>
+
+
+
+</view>
