@@ -1,7 +1,12 @@
 <!--miniprogram/pages/look/look.wxml-->
 <view class="main">
   <view class="title">{{title}}</view>
-  <view class="shijian">{{shijian}}</view>
+  <view class="second">
+    <view class="shijian">{{shijian}}</view>
+    <view><view class="bianji" bindtap="gotoedit">编辑</view></view>
+
+  </view>
+  
   <view class="content">{{content}}</view>
 
 

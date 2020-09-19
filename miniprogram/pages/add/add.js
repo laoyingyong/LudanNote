@@ -29,38 +29,19 @@ Page({
     }
     const db=wx.cloud.database();
     const jishiben=db.collection("jishiben");
-
-    //添加之前先查询
-    jishiben.where({
-      title:this.data.title
-    }).get({
+    jishiben.add({
+      data:{
+        title:_this.data.title,
+        content:_this.data.content,
+        time:new Date()
+      },
       success:function(res){
-        var arr=res.data;
-        if(arr.length!=0){//如果数据库已经存在了相同的标题
-          console.log("arr.lenth:"+arr.length);
-          wx.showToast({
-            title: '标题已经存在！请更换标题！',
-            icon:'none'
-          });
-          return;
-        }else{
-          jishiben.add({
-            data:{
-              title:_this.data.title,
-              content:_this.data.content,
-              time:new Date()
-            },
-            success:function(res){
-              wx.showToast({
-                title: '保存成功！',
-                icon:'success',
-                duration:2000
-              });
-              console.log(res);
-            }
-          });
-
-        }
+        wx.showToast({
+          title: '保存成功！',
+          icon:'success',
+          duration:2000
+        });
+        console.log(res);
       }
     });
   },

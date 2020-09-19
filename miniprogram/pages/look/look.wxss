@@ -22,3 +22,16 @@
   margin-right:10px;
   margin-bottom:10px;
 }
+
+.second{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.bianji{
+  margin-left: 10px;
+  font-size: 14px;
+  color: #2222ff
+}

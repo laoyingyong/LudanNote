@@ -8,7 +8,7 @@ const _ = db.command
 exports.main = async (event, context) => {
   try {
     return await db.collection('jishiben').where({
-      title:event.biaoti
+      _id:event._id
     }).remove()
   } catch (e) {
     console.error(e)

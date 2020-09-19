@@ -1,0 +1,15 @@
+<!--miniprogram/pages/edit/edit.wxml-->
+<view class="main">
+  <view class="title">
+    <input bindinput="settitle" class="in" value="{{title}}"/>
+  </view>
+  <view class="content">
+    <textarea class="mytextarea" bindinput="setcontent" value="{{content}}"></textarea>
+  </view>
+
+  <view class="save">
+    <button bindtap="save" style="width:100%;border:1px solid gray;border-radius:5px;margin-bottom:10px">保存修改</button>
+  </view>
+  
+
+</view>

@@ -26,12 +26,12 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "packNpmManually": false,
-    "packNpmRelationList": []
+    "packNpmRelationList": [],
+    "enableEngineNative": false
   },
   "appid": "wx847aa0745065a639",
   "projectname": "LuDanJiShiBen",

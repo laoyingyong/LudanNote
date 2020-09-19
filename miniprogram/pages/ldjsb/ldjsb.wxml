@@ -1,7 +1,7 @@
 <!--miniprogram/pages/ldjsb/ldjsb.wxml-->
 <view class="mainContainer">
 <scroll-view scroll-y="true" class="scrollview">
-  <view wx:for="{{list}}" class="item" data-name="{{item.title}}" data-shi="{{item.time}}" bindtap="lookdetail" bindlongpress="delete">
+  <view wx:for="{{list}}" class="item" data-name="{{item.title}}" data-_id="{{item._id}}" bindtap="lookdetail" bindlongpress="delete">
     <view class="item-detail"  class="in-item">
       <view class="title"> {{item.title}}</view>
       <view class="content"> {{item.time}}</view>
@@ -10,7 +10,7 @@
 </scroll-view>
   
   <view class="add">
-    <view bindtap="add" class="addbtn"> <image class="img" src="../../images/add.png"></image><text class="addtxt">新增</text></view>
+    <view bindtap="add" hover-class="dianji" class="addbtn"> <image class="img" src="../../images/add.png"></image><text class="addtxt">新增</text></view>
   </view>
  
   

@@ -6,11 +6,12 @@ Page({
    */
   data: {
     list:[],
-    name:"mingzi"
   },
 
   delete:function(v){
     var _this=this;
+    var _id=v.currentTarget.dataset._id;
+    console.log('要删除项的id是：'+_id);
     var tit=v.currentTarget.dataset.name;
     wx.showModal({
       title: '警告！',
@@ -23,7 +24,7 @@ Page({
             name: 'delete',
             // 传给云函数的参数
             data: {
-              biaoti: tit
+              _id: _id
             },
             success: function (res) {
               console.log("删除成功！");
@@ -36,11 +37,12 @@ Page({
                   for(var i=0;i<array.length;i++){
                     var ite=array[i];
                     var tt=ite.title;
-                    var con=ite.con;
+                    var id=ite._id;
                     var ss=ite.time;
                     var tStr=_this.dateFormat("yyyy-MM-dd HH:mm:ss",ss);
                     var oneItem={
                       title:tt,
+                      _id:id,
                       time:tStr
                     };
                     myList.push(oneItem);
@@ -98,10 +100,9 @@ Page({
   },
 
   lookdetail:function(e){
-    var t=e.currentTarget.dataset.name;
-    var shi=e.currentTarget.dataset.shi;
+    var _id=e.currentTarget.dataset._id;
     wx.navigateTo({
-      url: '../look/look?t='+t+'&shi='+shi,
+      url: '../look/look?_id='+_id,
     })
   },
   
@@ -129,8 +130,9 @@ Page({
           var item=array[i];
           var title=item.title;
           var time=item.time;
+          var _id=item._id;
           var len=_list.length;
-          _list.push({title:title,time:_this.dateFormat("yyyy-MM-dd HH:mm:ss",time)});
+          _list.push({title:title,_id:_id,time:_this.dateFormat("yyyy-MM-dd HH:mm:ss",time)});
         }
         console.log(_list);
         _this.setData({list:_list});

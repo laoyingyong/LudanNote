@@ -7,7 +7,15 @@ Page({
   data: {
     title:"",
     content:"",
-    shijian:""
+    shijian:"",
+    _id:""
+  },
+
+  gotoedit:function(){
+    wx.navigateTo({
+      url: '../edit/edit?_id='+this.data._id+'&title='+this.data.title+'&content='+this.data.content,
+    })
+
   },
 
 
@@ -38,17 +46,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var _id=options._id;
+    this.setData({_id:_id});
+   
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
     let _this=this;
-    var t=options.t;
-    var shi=options.shi;
-    var ss=shi.replace(/-/g,"/");
-    var da=new Date(ss);
-    console.log("时间是："+da)
     const db=wx.cloud.database();
-    const _=db.command;
     const jishiben=db.collection("jishiben");
     jishiben.where({
-      title:t,
+      _id:this.data._id,
     }).get({
       success:function(res){
         console.log("查询成功"+res.data);
@@ -66,23 +85,7 @@ Page({
       fail:function(err){
         console.log("没有对应的记录！");
       }
-      
-
     })
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
 
   },
 

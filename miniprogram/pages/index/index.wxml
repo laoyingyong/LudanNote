@@ -64,9 +64,9 @@
   
 
   <!-- 卤蛋记事本 -->
-  <view class="uploader">
-    <navigator url="../ldjsb/ldjsb" open-type="navigate" class="uploader-text">
-      <text>卤蛋记事本</text>
+  <view class="main">
+    <navigator url="../ldjsb/ldjsb" open-type="navigate">
+      <text>进入卤蛋记事本</text>
     </navigator>
   </view>
 
