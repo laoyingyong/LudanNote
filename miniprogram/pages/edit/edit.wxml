@@ -4,7 +4,7 @@
     <input bindinput="settitle" class="in" value="{{title}}"/>
   </view>
   <view class="content">
-    <textarea class="mytextarea" bindinput="setcontent" value="{{content}}"></textarea>
+    <textarea class="mytextarea" bindinput="setcontent" value="{{content}}" maxlength="-1"></textarea>
   </view>
 
   <view class="save">

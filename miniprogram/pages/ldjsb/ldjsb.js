@@ -33,8 +33,15 @@ Page({
               jishiben.get({//再重新查询数据库，刷新数据
                 success:function(r){
                   var array=r.data;
+                  if(array.length===0){
+                    wx.showToast({
+                      title: '您还没有任何记事，请新增一个吧！',
+                      icon:'none',
+                      duration:2000
+                    })
+                  }
                   var myList=new Array();
-                  for(var i=0;i<array.length;i++){
+                  for(var i=array.length-1;i>=0;i--){
                     var ite=array[i];
                     var tt=ite.title;
                     var id=ite._id;
@@ -126,7 +133,14 @@ Page({
     jishiben.get({
       success:function(res){
         var array=res.data;
-        for(var i=0;i<array.length;i++){
+        if(array.length===0){
+          wx.showToast({
+            title: '您还没有任何记事，请新增一个吧！',
+            icon:'none',
+            duration:2000
+          })
+        }
+        for(var i=array.length-1;i>=0;i--){
           var item=array[i];
           var title=item.title;
           var time=item.time;

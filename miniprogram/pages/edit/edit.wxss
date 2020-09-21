@@ -19,6 +19,7 @@
   height: 380px;
   width: 95%;
   border: 1px solid red;
+  border-radius: 10px;
 }
  
 .content{

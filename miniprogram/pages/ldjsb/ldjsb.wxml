@@ -8,6 +8,7 @@
     </view>
   </view>
 </scroll-view>
+
   
   <view class="add">
     <view bindtap="add" hover-class="dianji" class="addbtn"> <image class="img" src="../../images/add.png"></image><text class="addtxt">新增</text></view>

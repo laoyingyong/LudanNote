@@ -44,13 +44,13 @@
   align-items: center;
   justify-content: center;
   border-radius: 3px;
-  border: 1px solid blue;
+  border: 1px solid #cccccc;
   padding: 3px;
 }
 
 .dianji{
   opacity:0.8;
-  background-color: gray;
+  background-color: #dddddd;
 }
 
 .img{
@@ -64,5 +64,10 @@
 
 .scrollview{
   height: 400px;
-  
+}
+
+.tishi{
+  text-align: center;
+  color: red;
+  margin-top: 10px;
 }
